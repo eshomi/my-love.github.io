@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для моей любимой</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background: url('https://postila.ru/data/c0/15/23/21/c015232169ea763828a6529fe1b1d2318d05a3c7cdda7f4980739f6c8d26722c.gif') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding-left: 30vw;
+        }
+        .container {
+            position: relative;
+        }
+        .heart {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+            cursor: pointer;
+            box-shadow: 0 0 20px red;
+        }
+        .heart::before, .heart::after {
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -100px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 100px;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(-45deg); box-shadow: 0 0 20px red; }
+            50% { transform: scale(1.1) rotate(-45deg); box-shadow: 0 0 40px red; }
+        }
+        .text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    margin-top: 70px;
+    margin-left: 50px; /* двигай как надо */
+    text-align: left;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart" onclick="window.location.href='love.html'"></div>
+        <div class="text">Я тебя очень сильно люблю</div>
+    </div>
+</body>
+</html>
